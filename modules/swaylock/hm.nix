@@ -34,7 +34,7 @@ in
         # inadvertently installing Swaylock when it's not desired.
         #
         # [1]: https://github.com/nix-community/home-manager/blob/5cfbf5cc37a3bd1da07ae84eea1b828909c4456b/modules/programs/swaylock.nix#L12-L17
-        (lib.versionAtLeast config.home.stateVersion "23.05");
+        false; # (lib.versionAtLeast config.home.stateVersion "23.05");
 
     useWallpaper = config.lib.stylix.mkEnableWallpaper "Swaylock" true;
   };
